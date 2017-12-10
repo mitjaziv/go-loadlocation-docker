@@ -1,0 +1,9 @@
+FROM golang:1.9
+
+RUN mkdir /out
+VOLUME ['/out']
+
+RUN mkdir -p /go/src/github.com/mitjaziv/go-loadlocation-docker
+WORKDIR /go/src/github.com/mitjaziv/go-loadlocation-docker
+
+CMD ["make", "build"]

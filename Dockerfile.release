@@ -1,0 +1,7 @@
+FROM gliderlabs/alpine:3.3
+
+RUN apk add --no-cache tzdata
+
+COPY out/go-loadlocation-docker /go-loadlocation-docker
+
+ENTRYPOINT ["/go-loadlocation-docker"]
